@@ -6,6 +6,8 @@ from nltk.corpus import wordnet as wn
 from nltk import sent_tokenize
 from textblob import TextBlob as tb
 import re
+import sys
+import json
 
 
 def getQuestions(passage, title):
@@ -17,8 +19,8 @@ def getQuestions(passage, title):
             if questionLine != "":
                 questionLine += "?"
                 question = {
-                            "Question": questionLine,
-                            "Answer": ""
+                            "question": questionLine,
+                            "answer": ""
                             }
                 questions.append(question)
         return questions
@@ -49,13 +51,13 @@ def getQuestions(passage, title):
         questions = []
         # who questions
         for person in entities["PERSON"]:
-            question = {"Question": "Who is " + person + " ?",
-                        "Answer": ""}
+            question = {"question": "Who is " + person + " ?",
+                        "answer": ""}
             questions.append(question)
         # what questions
         for person in entities["PERSON"]:
-            question = {"Question": "What role does " + person + " play ?",
-                        "Answer": ""}
+            question = {"question": "What role does " + person + " play ?",
+                        "answer": ""}
             questions.append(question)
         return questions
 
@@ -112,7 +114,7 @@ def getQuestions(passage, title):
             expression = re.compile(re.escape(replace_phrase), re.IGNORECASE)
             sentence = expression.sub(blanks_phrase, str(sentence), count=1)
 
-            question['Question'] = sentence
+            question['question'] = sentence
             return question
 
         data = tb(passage)
@@ -137,7 +139,7 @@ def readText(inputType="default"):
     ip = ""
     title = ""
     if inputType == 'stdin':
-        ip = input
+        ip = input()
         title = "Input"
     elif inputType == 'file':
         filePath = input("Enter File Path :")
@@ -161,22 +163,21 @@ def readText(inputType="default"):
 def askQuestions(passage, questions):
     import random
     print("\n\n------------------------\n")
-    print("Read the passage and Answer the questions that follow\n")
+    print("Read the passage and answer the questions that follow\n")
     print(passage)
     print("\n\n------------------------\n")
-    print("Answer the following\n")
+    print("answer the following\n")
     alternateQuestion(questions)
     qLen = len(questions)
     random.shuffle(questions)
     for i, question in enumerate(questions):
-        print("Question {}/{}".format(i, qLen))
+        print("question {}/{}".format(i, qLen))
         pprint(question, indent=4)
-        print
 
 
 def alternateQuestion(questions):
     for i in range(len(questions)):
-        question = questions[i]["Question"]
+        question = questions[i]["question"]
         part = question.split("_")[-1]
         word = part.split(" ")[3]
         ss = wn.synsets(word)
@@ -195,9 +196,9 @@ def alternateQuestion(questions):
         questions[i]["AlternateQuestion"] = newQuestion
 
 def main():
-    text, title = readText(inputType="file")
-    questions = getQuestions(passage=text, title=title)
-    askQuestions(text, questions)
+    # text, title = readText(inputType="stdin")
+    questions = getQuestions(passage=sys.argv[1], title="Input")
+    print(json.dumps(questions))# askQuestions(text, questions)
     return 0
 
 
