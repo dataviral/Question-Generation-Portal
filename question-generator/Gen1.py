@@ -16,7 +16,8 @@ def getQuestions(passage, title):
         questions = []
         for question in candidateQuestions:
             questionLine = question.split(".")[-1]
-            if questionLine != "":
+
+            if len(questionLine) > 3:
                 questionLine += "?"
                 question = {
                             "question": questionLine,

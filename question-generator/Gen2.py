@@ -89,17 +89,6 @@ def questiontype2(data):#Proper Nouns
 			print("Q)\t"+r+" What are we talking about here?\n")
 			print(a)
 			print("\n")
-			'''
-			while(flag==1):
-				if (propernouns[len(propernouns)-1-temp] not in l):
-					l.append(propernouns[len(propernouns)-1-temp])
-					temp=temp+1
-					if (temp==3):
-						flag=0
-			random.shuffle(l)
-			for i in range(4):
-				print(l[i])
-			'''
 
 def questiontype3(data):#True or False
 	for x in data:
