@@ -2,6 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
+var logger = require('morgan');
 
 // invoke an instance of express application.
 var app = express();
@@ -9,6 +10,8 @@ var app = express();
 // set our application port
 app.set('port', 9000);
 
+// set logging
+app.use(logger('dev'));
 
 // initialize body-parser to parse incoming parameters requests to req.body
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -54,45 +57,6 @@ app.get('/', sessionChecker, (req, res) => {
 });
 
 
-// // route for user Login
-// app.route('/login')
-//     .get(sessionChecker, (req, res) => {
-//         res.sendFile(__dirname + '/public/login.html');
-//     })
-//     .post((req, res) => {
-//         var username = req.body.username,
-//             password = req.body.password;
-//
-//             if (username!='admin' && password != '123') {
-//                 res.redirect('/login');
-//             } else {
-//                 req.session.user =  ['admin',123]; //user.dataValues;
-//                 res.redirect('/dashboard');
-//             }
-//     });
-//
-//
-// // route for user's dashboard
-// app.get('/dashboard', (req, res) => {
-//     if (req.session.user && req.cookies.user_sid) {
-//         res.sendFile(__dirname + '/public/dashboard.html');
-//     } else {
-//         res.redirect('/login');
-//     }
-// });
-//
-//
-// // route for user logout
-// app.get('/logout', (req, res) => {
-//     if (req.session.user && req.cookies.user_sid) {
-//         res.clearCookie('user_sid');
-//         res.redirect('/');
-//     } else {
-//         res.redirect('/login');
-//     }
-// });
-
-
 // route for user Login
 var loginRoutes = require('./routes/login');
 app.route('/login')
@@ -111,16 +75,13 @@ app.get('/logout', logoutRoutes.get)
 
 
 // route for handling 404 requests(unavailable routes)
-app.use(function (req, res, next) {
-  res.status(404).send("Sorry can't find that!")
-});
-
-
-// route for handling 404 requests(unavailable routes)
-app.use(function (req, res, next) {
-  res.status(404).send("Sorry can't find that!")
+app.use(function (err, req, res, next) {
+  res.status(404).send("404 Page Not Found !")
 });
 
 
 // start the express server
 app.listen(app.get('port'), () => console.log(`App started on port ${app.get('port')}`));
+
+
+module.exports = app;
