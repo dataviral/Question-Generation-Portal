@@ -56,6 +56,12 @@ app.get('/', sessionChecker, (req, res) => {
     res.redirect('/login');
 });
 
+//route for user signup
+var signupRoutes = require('./routes/signup');
+app.route('/signup')
+    .get(sessionChecker, signupRoutes.get)
+    .post(signupRoutes.post);	
+
 
 // route for user Login
 var loginRoutes = require('./routes/login');
