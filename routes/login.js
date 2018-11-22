@@ -16,7 +16,6 @@ var onPostRequest = function(req, res, next){
 		//console.log(user);
 		res.redirect('/login');
 	} else {
-		console.log("Error");
 		req.session.user = user.username;
 		res.redirect('/dashboard');
 	}
