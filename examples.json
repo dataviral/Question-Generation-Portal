@@ -1,0 +1,117 @@
+{
+	"football" :{
+		"details" : "Football is a family of team sports that involve, to varying degrees, kicking a ball to score a goal. Unqualified, the word football is understood to refer to whichever form of football is the most popular in the regional context in which the word appears. Sports commonly called football in certain places include association football (known as soccer in some countries); gridiron football (specifically American football or Canadian football); Australian rules football; rugby football (either rugby league or rugby union); and Gaelic football.[1][2] These different variations of football are known as football codes.There are a number of references to traditional, ancient, or prehistoric ball games played by indigenous peoples in many different parts of the world.[3][4][5] Contemporary codes of football can be traced back to the codification of these games at English public schools during the nineteenth century.[6][7] The expansion of the British Empire allowed these rules of football to spread to areas of British influence outside the directly controlled Empire.[8] By the end of the nineteenth century, distinct regional codes were already developing: Gaelic football, for example, deliberately incorporated the rules of local traditional football games in order to maintain their heritage.[9] In 1888, The Football League was founded in England, becoming the first of many professional football competitions. During the twentieth century, several of the various kinds of football grew to become some of the most popular team sports in the world.[10] There are conflicting explanations of the origin of the word football. It is widely assumed that the word football (or the phrase foot ball) refers to the action of the foot kicking a ball.[13] There is an alternative explanation, which is that football originally referred to a variety of games in medieval Europe, which were played on foot. There is no conclusive evidence for either explanation.",
+		"data": [
+			{
+				"question": "Who is Gaelic ?",
+				"answer" : ""
+			},
+			{
+				"question": "What role does Gaelic play ?",
+				"answer": ""
+			},
+			{
+				"question": "Unqualified, the __________ __________ is understood to refer to whichever form of football is the most popular in the regional context in which the word appears.",
+				"answer": "word football"
+			},
+			{
+				"question": "Sports commonly called football in certain places include __________ __________ (known as soccer in some countries); gridiron football (specifically American football or Canadian football); Australian rules football; rugby football (either rugby league or rugby union); and Gaelic football.",
+				"answer": "association football"
+			},
+			{
+				"question": "During the __________ __________, several of the various kinds of football grew to become some of the most popular team sports in the world.",
+				"answer": "twentieth century"
+			},
+			{
+				"question": "It is widely assumed that the __________ __________ football (or the phrase foot ball) refers to the action of the foot kicking a ball.",
+				"answer": "word"
+			},
+			{
+				"question": "There is no __________ __________ for either explanation.",
+				"answer": "conclusive evidence"
+			}
+		]
+	},
+	"gravity": {
+		"details": "Gravity (from Latin gravitas, meaning 'weight'[1]), or gravitation, is a natural phenomenon by which all things with mass or energy—including planets, stars, galaxies, and even light[2]—are brought toward (or gravitate toward) one another. On Earth, gravity gives weight to physical objects, and the Moon's gravity causes the ocean tides. The gravitational attraction of the original gaseous matter present in the Universe caused it to begin coalescing, forming stars – and for the stars to group together into galaxies – so gravity is responsible for many of the large-scale structures in the Universe. Gravity has an infinite range, although its effects become increasingly weaker on farther objects. Gravity is most accurately described by the general theory of relativity (proposed by Albert Einstein in 1915) which describes gravity not as a force, but as a consequence of the curvature of spacetime caused by the uneven distribution of mass. The most extreme example of this curvature of spacetime is a black hole, from which nothing—not even light—can escape once past the black hole's event horizon.[3] However, for most applications, gravity is well approximated by Newton's law of universal gravitation, which describes gravity as a force which causes any two bodies to be attracted to each other, with the force proportional to the product of their masses and inversely proportional to the square of the distance between them.Gravity is the weakest of the four fundamental forces of physics, approximately 1038 times weaker than the strong force, 1036 times weaker than the electromagnetic force and 1029 times weaker than the weak force. As a consequence, it has no significant influence at the level of subatomic particles.[4] In contrast, it is the dominant force at the macroscopic scale, and is the cause of the formation, shape and trajectory (orbit) of astronomical bodies. For example, gravity causes the Earth and the other planets to orbit the Sun, it also causes the Moon to orbit the Earth, and causes the formation of tides, the formation and evolution of the Solar System, stars and galaxies. The earliest instance of gravity in the Universe, possibly in the form of quantum gravity, supergravity or a gravitational singularity, along with ordinary space and time, developed during the Planck epoch (up to 10−43 seconds after the birth of the Universe), possibly from a primeval state, such as a false vacuum, quantum vacuum or virtual particle, in a currently unknown manner.[5] Attempts to develop a theory of gravity consistent with quantum mechanics, a quantum gravity theory, which would allow gravity to be united in a common mathematical framework (a theory of everything) with the other three forces of physics, are a current area of research.",
+		"data": [
+			{
+				"question": "Who is Albert Einstein ?",
+				"answer": ""
+			},
+			{
+				"question": "What role does Albert Einstein play ?",
+				"answer": ""
+			},
+			{
+				"question": "On Earth, __________ gives weight to physical objects, and the Moon's gravity causes the ocean tides.",
+				"answer": "gravity"
+			},
+			{
+				"question": "The __________ __________ of the original gaseous matter present in the Universe caused it to begin coalescing, forming stars – and for the stars to group together into galaxies – so gravity is responsible for many of the large-scale structures in the Universe.",
+				"answer": "gravitational attraction"
+			},
+			{
+				"question": "Gravity has an __________ __________, although its effects become increasingly weaker on farther objects.Gravity is most accurately described by the general theory of relativity (proposed by Albert Einstein in 1915) which describes gravity not as a force, but as a consequence of the curvature of spacetime caused by the uneven distribution of mass.",
+				"answer": "infinite range"
+			},
+			{
+				"question": "The most __________ __________ of this curvature of spacetime is a black hole, from which nothing—not even light—can escape once past the black hole's event horizon.",
+				"answer": "extreme example"
+			},
+			{
+				"question": "As a __________, it has no significant influence at the level of subatomic particles.",
+				"answer": "consequence"
+			},
+			{
+				"question": "For __________, gravity causes the Earth and the other planets to orbit the Sun, it also causes the Moon to orbit the Earth, and causes the formation of tides, the formation and evolution of the Solar System, stars and galaxies.The earliest instance of gravity in the Universe, possibly in the form of quantum gravity, supergravity or a gravitational singularity, along with ordinary space and time, developed during the Planck epoch (up to 10−43 seconds after the birth of the Universe), possibly from a primeval state, such as a false vacuum, quantum vacuum or virtual particle, in a currently unknown manner.",
+				"answer": "example"
+			}
+		]
+	},
+	"crypto" :{
+		"details": "A cryptocurrency (or crypto currency) is a digital asset designed to work as a medium of exchange that uses strong cryptography to secure financial transactions, control the creation of additional units, and verify the transfer of assets.[1][2][3] Cryptocurrencies are a kind of alternative currency and digital currency (of which virtual currency is a subset). Cryptocurrencies use decentralized control as opposed to centralized digital currency and central banking systems.[4] The decentralized control of each cryptocurrency works through distributed ledger technology, typically a blockchain, that serves as a public financial transaction database.[5] Bitcoin, first released as open-source software in 2009, is generally considered the first decentralized cryptocurrency.[6] Since the release of bitcoin, over 4,000 altcoins (alternative variants of bitcoin, or other cryptocurrencies) have been created. In 1983, the American cryptographer David Chaum conceived an anonymous cryptographic electronic money called ecash.[7][8] Later, in 1995, he implemented it through Digicash,[9] an early form of cryptographic electronic payments which required user software in order to withdraw notes from a bank and designate specific encrypted keys before it can be sent to a recipient. This allowed the digital currency to be untraceable by the issuing bank, the government, or any third party. In 1996, the NSA published a paper entitled How to Make a Mint: the Cryptography of Anonymous Electronic Cash, describing a Cryptocurrency system first publishing it in a MIT mailing list[10] and later in 1997, in The American Law Review (Vol. 46, Issue 4).[11] In 1998, Wei Dai published a description of b-money, characterized as an anonymous, distributed electronic cash system.[12] Shortly thereafter, Nick Szabo described bit gold.[13] Like bitcoin and other cryptocurrencies that would follow it, bit gold (not to be confused with the later gold-based exchange, BitGold) was described as an electronic currency system which required users to complete a proof of work function with solutions being cryptographically put together and published. A currency system based on a reusable proof of work was later created by Hal Finney who followed the work of Dai and Szabo. The first decentralized cryptocurrency, bitcoin, was created in 2009 by pseudonymous developer Satoshi Nakamoto. It used SHA-256, a cryptographic hash function, as its proof-of-work scheme.[14][15] In April 2011, Namecoin was created as an attempt at forming a decentralized DNS, which would make internet censorship very difficult. Soon after, in October 2011, Litecoin was released. It was the first successful cryptocurrency to use scrypt as its hash function instead of SHA-256. Another notable cryptocurrency, Peercoin was the first to use a proof-of-work/proof-of-stake hybrid.[16] On 6 August 2014, the UK announced its Treasury had been commissioned to do a study of cryptocurrencies, and what role, if any, they can play in the UK economy. The study was also to report on whether regulation should be considered.[17] Decentralized cryptocurrency is produced by the entire cryptocurrency system collectively, at a rate which is defined when the system is created and which is publicly known. In centralized banking and economic systems such as the Federal Reserve System, corporate boards or governments control the supply of currency by printing units of fiat money or demanding additions to digital banking ledgers. In case of decentralized cryptocurrency, companies or governments cannot produce new units, and have not so far provided backing for other firms, banks or corporate entities which hold asset value measured in it. The underlying technical system upon which decentralized cryptocurrencies are based was created by the group or individual known as Satoshi Nakamoto.[23] As of May 2018, over 1,800 cryptocurrency specifications existed.[24] Within a cryptocurrency system, the safety, integrity and balance of ledgers is maintained by a community of mutually distrustful parties referred to as miners: who use their computers to help validate and timestamp transactions, adding them to the ledger in accordance with a particular timestamping scheme.[14] Most cryptocurrencies are designed to gradually decrease production of that currency, placing a cap on the total amount of that currency that will ever be in circulation.[25] Compared with ordinary currencies held by financial institutions or kept as cash on hand, cryptocurrencies can be more difficult for seizure by law enforcement.[1] This difficulty is derived from leveraging cryptographic technologies.",
+		"data" : [
+			{
+				"question" : "Who is Wei Dai ?",
+				"answer" : ""
+			},
+			{
+				"question" : "Who is Satoshi Nakamoto ?",
+				"answer" : ""
+			},
+			{
+				"question" : "What role does David Chaum play ?",
+				"answer" : ""
+			},
+			{
+				"question" : "Cryptocurrencies use decentralized __________ as opposed to centralized digital currency and central banking systems.",
+				"answer" : "control"
+			},
+			{
+				"question" : "This allowed the __________ __________ to be untraceable by the issuing bank, the government, or any third party.\nIn 1996, the NSA published a paper entitled How to Make a Mint: the Cryptography of Anonymous Electronic Cash, describing a Cryptocurrency system first publishing it in a MIT mailing list[10] and later in 1997, in The American Law Review",
+				"answer" : "digital currency"
+			},
+			{
+				"question" : "A __________ __________ based on a reusable proof of work was later created by Hal Finney who followed the work of Dai and Szabo.\nThe first decentralized cryptocurrency, bitcoin, was created in 2009 by pseudonymous developer Satoshi Nakamoto.",
+				"answer" : "currency system"
+			},
+			{
+				"question" : "It used SHA-256, a cryptographic __________ __________, as its proof-of-work scheme.",
+				"answer" : "hash function"
+			},
+			{
+				"question" : "It was the first __________ __________ to use scrypt as its hash function instead of SHA-256.",
+				"answer" : "successful cryptocurrency"
+			},
+			{
+				"question" : "In centralized __________ and economic systems such as the Federal Reserve System, corporate boards or governments control the supply of currency by printing units of fiat money or demanding additions to digital banking ledgers.",
+				"answer" : "banking"
+			},
+			{
+				"question" : "The underlying __________ __________ upon which decentralized cryptocurrencies are based was created by the group or individual known as Satoshi Nakamoto.",
+				"answer" : "technical system"
+			}
+		]
+	}
+}

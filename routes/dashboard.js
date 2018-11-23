@@ -21,16 +21,25 @@ var generateQuestions =  function(data, socket){
 	}
 	 PythonShell.run('Gen1.py', options, function (err, results) {
       if (err) throw err;
-      console.log(JSON.parse(results));
 	  socket.emit('generatedQuestions', {'data': JSON.parse(results)});
     });
+}
+
+var pFetch = function(val, socket){
+	var fs = require('fs');
+	var obj = JSON.parse(fs.readFileSync('examples.json', 'utf8'));
+	socket.emit('pFetched', obj[val]);
 }
 
 io.on('connection', (socket) => {
 	socket.on('generateQuestions', (data) => {
 		generateQuestions(data, socket);
 	});
+	socket.on('pFetch', (val) => {
+		pFetch(val, socket);
+	});
 });
+
 
 var dashboardRoutes = {
 	get: onGetRequest,

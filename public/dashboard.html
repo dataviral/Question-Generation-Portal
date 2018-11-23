@@ -40,7 +40,13 @@
 
         <div class="container row">
            <h3>Hi, Input some text into the box below</h3>
-		   <textarea style="width: 100%;height: 30%" id='textarea'></textarea>
+			   <select id="select">
+				   <option value="input">Generate Questions</option>
+				   <option value="football">Football</option>
+				   <option value="gravity">Gravity</option>
+				   <option value="crypto">Crypto Currency</option>
+			   </select>
+		   <textarea style="width: 100%;height: 30%" id='textarea' placeholder="Type Something Here"></textarea>
 		   <br>
 		   <button id='button'>Generate Questions</button>
         </div>
@@ -51,6 +57,18 @@
 		<script>
 			var socket =  io('http://localhost:9001');
 			document.getElementById('button').onclick = submitText;
+			document.getElementById('select').onchange = pFetch;
+
+			socket.on('generatedQuestions', (data) => {
+				console.log(data);
+				data = data.data;
+				createTable(data);
+			});
+			socket.on('pFetched', (data) => {
+				document.getElementById('textarea').value = data.details;
+				createTable(data.data);
+			});
+
 			function submitText(){
 					var text = document.getElementById('textarea');
 					if(text.value){
@@ -59,9 +77,19 @@
 						alert("Insert some text first !")
 					}
 			}
-			socket.on('generatedQuestions', (data) => {
-				console.log(data);
-				data = data.data;
+
+			function pFetch(){
+				var select = document.getElementById('select');
+				var val = select.value;
+				document.body.removeChild(document.body.lastChild);
+				if(val == 'input'){
+					var text = document.getElementById('textarea').value = '';
+				} else {
+					socket.emit('pFetch', val);
+				}
+			}
+
+			function createTable(data){
 				document.body.removeChild(document.body.lastChild);
 				var table = document.createElement('table');
 
@@ -87,7 +115,7 @@
 					table.appendChild(tr)
 				}
 				document.body.appendChild(table);
-			});
+			}
 
 		</script>
     </body>
