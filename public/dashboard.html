@@ -1,9 +1,19 @@
-<html>
-    <head>
-        <title>Question Generation Portal</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		<style>
-			table, th, td {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Question Generation Portal</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    			table, th, td {
 				border-collapse: collapse;
 				padding: 1em;
 			}
@@ -13,32 +23,36 @@
 			}
 			tr:hover {background-color: #f5f5f5;}
 			tr:nth-child(even) {background-color: #f9f9db;}
-		</style>
-	</head>
-    <body class="container">
-        <div class="page-header">
-            <h1>QUESTION GENERATION SYSTEM</h1>
-        </div>
+    
+  </style>
+</head>
+<body>
 
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/signup">Sign Up</a></li>
-                        <li><a href="/dashboard">Dashboard</a></li>
-                    </ul>
-
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="/login">Log In</a></li>
-                        <li><a href="/logout">Log Out</a></li>
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
-        </nav>
-
-        <div class="container row">
+<nav class="navbar navbar-inverse" style=" position: fixed; top: 0; width: 100%;  z-index: 1;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" >
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Question Generation Portal</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar" >
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/dashboard">Dashboard</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+	<li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span>Log Out</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="jumbotron" >
+  <div class="container text-center" style="padding: 10px 10px 10px 10px;">
+  </div>
+</div>
+<div class="container row" style="padding-right: 30px; padding-left: 30px;" >
            <h3>Hi, Input some text into the box below</h3>
 			   <select id="select">
 				   <option value="input">Generate Questions</option>
