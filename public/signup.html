@@ -31,7 +31,8 @@
                 <form action="/signup" method="post">
                     <div>
                         <label>Username:</label>
-                        <input type="text" name="username"/>
+                        <input type="text" name="username" id="uname"/>
+                        <span id="uname_response" class="response"></span>
                     </div>
                     <div>
                         <label>FirstName:</label>
@@ -46,10 +47,39 @@
                         <input type="password" name="password"/>
                     </div>
                     <div>
-                        <input class="btn btn-primary" type="submit" value="Sign Up"/>
+                        <input class="btn btn-primary" type="submit" value="Sign Up" id="regForm"/>
                     </div>
                 </form>                  
             </div>          
         </div>
     </body>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+	 /**
+	 * Alert the user through a message if the USN is avaialble or not 
+	 */
+	$('#uname').focusout(() => {
+	    const data = { uname : $('#uname').val() };
+	    const url = "/existUserName"; 
+	    console.log(data);
+	    // Function which displays whether the USN is avaialable for use or not
+	    displayMessage = (res) => {
+		$("#uname_response").show();
+		if(res.exist) {
+		    $("#uname_response").html("<span class='not-exists'>* Username Already in use.</span>");     
+		    $('#regForm').prop('disabled', true);  
+		}
+		else {
+		    $("#uname_response").html("<span class='exists'>Available.</span>");
+		    $('#regForm').prop('disabled', false);
+		}
+	}
+
+	$.ajax({
+		url:url,
+		data:data,
+		success:displayMessage
+	});
+	});
+    </script>
 </html>
