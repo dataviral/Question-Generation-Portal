@@ -53,8 +53,11 @@ var sessionChecker = (req, res, next) => {
 
 // route for Home-Page
 app.get('/', sessionChecker, (req, res) => {
-    res.redirect('/login');
+    res.redirect('/home');
 });
+
+var homeRoutes = require('./routes/home');
+app.route('/home').get(sessionChecker, homeRoutes.get);
 
 //route for user signup
 var signupRoutes = require('./routes/signup');
