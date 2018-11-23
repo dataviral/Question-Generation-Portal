@@ -25,7 +25,7 @@ var onPostRequest = function(req, res, next){
         					console.error(err);
         					return;
         					}
-        				console.log("File has been updated);
+        				console.log("File has been updated");
         				});
 		res.redirect('/login');
 	} else {
